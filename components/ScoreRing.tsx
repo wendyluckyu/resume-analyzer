@@ -29,7 +29,7 @@ export default function ScoreRing({ score }: ScoreRingProps) {
             cy={size / 2}
             r={radius}
             fill="none"
-            stroke="#1e293b"
+            stroke="#e2e8f0"
             strokeWidth={strokeWidth}
           />
           {/* Score arc */}
@@ -49,7 +49,7 @@ export default function ScoreRing({ score }: ScoreRingProps) {
         {/* Center text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className={`text-3xl font-bold ${text}`}>{score}</span>
-          <span className="text-xs text-slate-400">/ 100</span>
+          <span className="text-xs text-slate-400 font-medium">/ 100</span>
         </div>
       </div>
       <span className={`text-sm font-semibold ${text}`}>{label}</span>

@@ -12,14 +12,14 @@ export default function LoadingState() {
     <div className="card flex flex-col items-center gap-6 py-12 animate-fade-in">
       {/* Spinner */}
       <div className="relative h-16 w-16">
-        <div className="absolute inset-0 rounded-full border-4 border-slate-800" />
+        <div className="absolute inset-0 rounded-full border-4 border-slate-200" />
         <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-brand-500 animate-spin" />
         <div className="absolute inset-2 rounded-full border-4 border-transparent border-t-brand-300 animate-spin-slow" />
       </div>
 
-      <div className="text-center space-y-2">
-        <p className="text-sm font-medium text-slate-200">DeepSeek v3.2 分析中</p>
-        <p className="text-xs text-slate-500">通常需要 10 - 30 秒</p>
+      <div className="text-center space-y-1">
+        <p className="text-sm font-medium text-slate-700">DeepSeek v3.2 分析中</p>
+        <p className="text-xs text-slate-400">通常需要 10 - 30 秒</p>
       </div>
 
       {/* Step list */}
@@ -27,10 +27,10 @@ export default function LoadingState() {
         {steps.map((step, i) => (
           <div
             key={i}
-            className="flex items-center gap-3 text-xs text-slate-500"
+            className="flex items-center gap-3 text-xs text-slate-400"
             style={{ animationDelay: `${i * 0.5}s` }}
           >
-            <div className="h-1.5 w-1.5 rounded-full bg-brand-500 opacity-60" />
+            <div className="h-1.5 w-1.5 rounded-full bg-brand-400 opacity-60" />
             {step}
           </div>
         ))}
